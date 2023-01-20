@@ -7,7 +7,7 @@ class anagram:
         self.scrambled_word = ''
         self.word_length = 0
         self.found_it = False
-        
+
     def scramble(self):
         position_list = []
         position = 0
@@ -30,7 +30,6 @@ class anagram:
         counter = 0
         failed_attempts = []
         self.found_it   = False
-        invalid_input   = False
         no_of_tries     = 7
         self.scramble()
         
@@ -61,11 +60,9 @@ class anagram:
             for i in range(len(inp)):
                 if not inp[i].isalpha():
                     print(f"Don't guess numbers")
-                    invalid_input = True
                     continue
                 elif inp[i] not in self.word:
                     print(f"{inp[i]} is not even in the word. What's wrong with you?")
-                    invalid_input = True
                     continue
 
             if inp == self.word:
